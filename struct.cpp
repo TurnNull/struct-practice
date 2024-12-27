@@ -61,6 +61,7 @@ void tampilkanData(int pos) {
 }
 
 void ubahData(int pos) {
+    system("cls");
     int nomor;
     cout << "Masukkan nomor data yang ingin diubah: ";
     cin >> nomor;
@@ -93,6 +94,21 @@ void ubahData(int pos) {
     cout << "\nData berhasil diubah!\n";
 }
 
+void hapusData(int pos) {
+    system("cls");
+    int nomor;
+    cout << "Masukkan nomor data yang ingin dihapus: ";
+    cin >> nomor;
+
+    int index = nomor - 1;
+    for (index++; index < pos - 1; index++) {
+        sikc[index] = sikc[index + 1];
+    }
+    pos--;
+    cout << "\nData berhasil dihapus!\n";
+    getch();
+}
+
 int main() {
 char pl;
 do {
@@ -101,18 +117,15 @@ do {
   switch (pl) {
     case '1':
       buatData();
-      /* code */
       break;
     case '2':
       tampilkanData(pos);
-      /* code */ 
       break;  
     case '3':
-      /* code */
       ubahData(pos);
       break;  
     case '4':
-      /* code */
+      hapusData(pos);
       break;  
     case '5':
       /* code */
