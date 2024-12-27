@@ -60,6 +60,38 @@ void tampilkanData(int pos) {
     getch();
 }
 
+void ubahData(int pos) {
+    int nomor;
+    cout << "Masukkan nomor data yang ingin diubah: ";
+    cin >> nomor;
+
+    int index = nomor - 1;
+    cout << "\n---- Data Lama ----\n";
+    cout << "NIM    : " << sikc[index].nim << "\n";
+    cout << "Nama   : " << sikc[index].nama << "\n";
+    cout << "Alamat : " << sikc[index].alamat << "\n";
+    cout << "IPK    : " << sikc[index].ipk << "\n";
+
+    cout << "\nMasukkan data baru:\n";
+
+    cout << "Masukan NIM: ";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    getline(cin, sikc[index].nim);
+
+    cout << "Masukan Nama: ";
+    getline(cin, sikc[index].nama);
+
+    cout << "Masukan Alamat: ";
+    getline(cin, sikc[index].alamat);
+
+    cout << "Masukan IPK: ";
+    while (!(cin >> sikc[index].ipk) || sikc[index].ipk < 0.0 || sikc[index].ipk > 4.0) {
+        cout << "Input IPK tidak valid. Masukkan angka antara 0.0 dan 4.0: ";
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    cout << "\nData berhasil diubah!\n";
+}
 
 int main() {
 char pl;
@@ -77,6 +109,7 @@ do {
       break;  
     case '3':
       /* code */
+      ubahData(pos);
       break;  
     case '4':
       /* code */
