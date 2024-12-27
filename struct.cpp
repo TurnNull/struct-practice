@@ -10,7 +10,7 @@ void menu() {
     cout<<"1. Menu Buat Data"<<"\n";            
     cout<<"2. Menu Lihat Data"<<"\n";            
     cout<<"3. Menu Ubah"<<"\n";           
-    cout<<"4. Menu Keempat"<<"\n";            
+    cout<<"4. Menu Hapus"<<"\n";            
     cout<<"5. Exit"<<"\n";           
     cout<<"Masukan angka :";        
 }
