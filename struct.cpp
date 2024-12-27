@@ -48,6 +48,19 @@ void buatData() {
     }
 }
 
+void tampilkanData(int pos) {
+  for (int i = 0; i < pos; i++) {
+        cout << "\nData ke-" << (i + 1) << ":\n";
+        cout << "NIM    : " << sikc[i].nim << "\n";
+        cout << "Nama   : " << sikc[i].nama << "\n";
+        cout << "Alamat : " << sikc[i].alamat << "\n";
+        cout << "IPK    : " << sikc[i].ipk << "\n";
+    }
+    cout << "\n--------------------------------\n";
+    getch();
+}
+
+
 int main() {
 char pl;
 do {
@@ -59,6 +72,7 @@ do {
       /* code */
       break;
     case '2':
+      tampilkanData(pos);
       /* code */ 
       break;  
     case '3':
